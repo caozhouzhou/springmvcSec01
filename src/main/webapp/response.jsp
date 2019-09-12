@@ -12,6 +12,6 @@
 </head>
 <body>
     <h3>resonseTest</h3>
-    <a href="/user/testString">testString</a>
+    <a href="user/testString">testString</a>
 </body>
 </html>
