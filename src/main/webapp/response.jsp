@@ -13,5 +13,7 @@
 <body>
     <h3>resonseTest</h3>
     <a href="user/testString">testString</a>
+    <<br/>
+    <a href="user/testVoid">testVoid</a>
 </body>
 </html>

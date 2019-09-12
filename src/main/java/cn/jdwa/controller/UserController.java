@@ -5,6 +5,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+
 /**
  * Created by czz on 2019/9/12.
  */
@@ -21,5 +26,16 @@ public class UserController {
         user.setAge(30);
         model.addAttribute("user",user);
         return "success";
+    }
+
+    /**
+     * 原生API实现转发
+     */
+    @RequestMapping("/testVoid")
+    public void testVoid(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        System.out.println("testVoid... ... ... ...");
+        request.getRequestDispatcher("/WEB-INF/pages/success.jsp").forward(request,response);
+        //加return为了结束程序
+        return;
     }
 }
