@@ -63,7 +63,7 @@ public class UserController {
     @RequestMapping("/testRedirect")
     public String testRedirect(){
         System.out.println("testRedirect... ... ... ...");
-        return "redirect:../index.jsp";
+        return "redirect:/index.jsp";
     }
 
 }
