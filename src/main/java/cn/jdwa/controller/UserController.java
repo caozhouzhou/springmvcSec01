@@ -4,6 +4,7 @@ import cn.jdwa.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -38,4 +39,21 @@ public class UserController {
         //加return为了结束程序
         return;
     }
+
+
+    @RequestMapping("/testModelAndView")
+    public ModelAndView testModelAndView(){
+        System.out.println("testModelAndView ... ... ... ...");
+        ModelAndView mv = new ModelAndView();
+        User user = new User();
+        user.setUsername("zhh");
+        user.setPassword("4321");
+        user.setAge(30);
+        mv.addObject("user",user);
+        mv.setViewName("success");
+        return mv;
+    }
+
+
+
 }

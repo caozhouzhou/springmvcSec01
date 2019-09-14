@@ -13,7 +13,9 @@
 <body>
     <h3>resonseTest</h3>
     <a href="user/testString">testString</a>
-    <<br/>
+    <br/>
     <a href="user/testVoid">testVoid</a>
+    <br/>
+    <a href="user/testModelAndView">testModelAndView</a>
 </body>
 </html>
