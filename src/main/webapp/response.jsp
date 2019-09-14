@@ -9,6 +9,14 @@
 <html>
 <head>
     <title>Title</title>
+    <script src="third_part/jquery/3.4.1/js/jquery-3.4.1.min.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                alert("Hello Ajax !");
+            });
+        });
+    </script>
 </head>
 <body>
     <h3>resonseTest</h3>
@@ -20,5 +28,9 @@
     <br/>
     <a href="user/testForWard">testForWard</a>
     <br/>
-    <a href="user/testRedirect">testRedirect</a> </body>
+    <a href="user/testRedirect">testRedirect</a>
+    <br/>
+    <button id="btn">发送ajax请求</button>
+
+</body>
 </html>
