@@ -3,7 +3,10 @@ package cn.jdwa.controller;
 import cn.jdwa.pojo.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.ServletException;
@@ -66,4 +69,10 @@ public class UserController {
         return "redirect:/index.jsp";
     }
 
+//    @RequestMapping(value = "/testAjax",method = RequestMethod.POST)
+    @RequestMapping("/testAjax")
+    public @ResponseBody User testAjax(@RequestBody User user){
+        System.out.println("testAjax... ... ... ...");
+        return user;
+    }
 }

@@ -13,7 +13,17 @@
     <script>
         $(function () {
             $("#btn").click(function () {
-                alert("Hello Ajax !");
+                $.ajax({
+                    url:"user/testAjax",
+                    contentType:"application/json;charset=UTF-8",
+                    data:'{"username":"czz","password":"123","age":"30"}',
+                    dataType:"json",
+                    type:"post",
+                    success:function (data) {
+                         alert(data);
+                         alert(data.username);
+                    }
+                });
             });
         });
     </script>
