@@ -54,6 +54,16 @@ public class UserController {
         return mv;
     }
 
+    @RequestMapping("/testForWard")
+    public String testForWard(){
+        System.out.println("testForWard... ... ... ...");
+        return "forward:/WEB-INF/pages/success.jsp";
+    }
 
+    @RequestMapping("/testRedirect")
+    public String testRedirect(){
+        System.out.println("testRedirect... ... ... ...");
+        return "redirect:../index.jsp";
+    }
 
 }
